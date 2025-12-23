@@ -1,245 +1,171 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>البصمة ون – منصة تجمع مشاريعك الرقمية</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- SEO مخفي -->
-  <meta name="description" content="البصمة ون منصة رقمية عربية تجمع مشاريعك وخدماتك وأدواتك في مكان واحد بواجهة احترافية وتجربة استخدام واضحة.">
-  <meta name="keywords" content="البصمة ون, منصة رقمية عربية, جمع المشاريع الرقمية, متجر رقمي, تسويق بالعمولة, قوالب مواقع, خدمات رقمية, صفحة روابط">
-  <meta name="author" content="Basma One">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>البصمة ون</title>
+<meta name="description" content="منصة رقمية تجمع مشاريعك وخدماتك وأدواتك في مكان واحد.">
+<meta name="keywords" content="البصمة ون, متجر رقمي, تسويق بالعمولة, قوالب, أدوات رقمية">
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="البصمة ون">
-  <meta property="og:description" content="منصة رقمية تجمع مشاريعك وخدماتك في مكان واحد.">
-  <meta property="og:image" content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgbT4w_HP5Siki2yzcnYGoDA-H3mLguxZvnmOggcDGjyy4NZzTxuh42mh79HAsWngZokPVL7VYtv5XI4izdqErYIZG76TM9arJv-AfZKSxi8OBA52ZfiwVRmtlNYqBXsoj5SRrRfey7CPCZJ3SlVbGKvAi5G6Ntc73tzYVG8qvgpDVYupHuH-gRv_Mi2sY/s561/Screenshot_20251223_200946_Google.jpg">
+<link rel="icon" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgbT4w_HP5Siki2yzcnYGoDA-H3mLguxZvnmOggcDGjyy4NZzTxuh42mh79HAsWngZokPVL7VYtv5XI4izdqErYIZG76TM9arJv-AfZKSxi8OBA52ZfiwVRmtlNYqBXsoj5SRrRfey7CPCZJ3SlVbGKvAi5G6Ntc73tzYVG8qvgpDVYupHuH-gRv_Mi2sY/s561/logo.jpg">
 
-  <!-- أيقونات -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+body{
+margin:0;
+font-family:system-ui;
+background:#050b1a;
+color:#fff;
+}
 
-  <style>
-    body {
-      margin: 0;
-      font-family: "Cairo", sans-serif;
-      background: linear-gradient(180deg, #0b1220, #020617);
-      color: #fff;
-    }
+/* الشريط العلوي */
+header{
+position:sticky;
+top:0;
+z-index:1000;
+background:rgba(5,11,26,.85);
+backdrop-filter:blur(10px);
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:14px 22px;
+}
 
-    /* الشريط العلوي */
-    header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 999;
-      background: rgba(2, 6, 23, 0.25);
-      backdrop-filter: blur(10px);
-      transition: background 0.3s;
-    }
+nav a{
+color:#fff;
+margin-left:18px;
+text-decoration:none;
+font-size:15px;
+opacity:.9;
+}
 
-    header.scrolled {
-      background: rgba(2, 6, 23, 0.9);
-    }
+nav a:hover{opacity:1}
 
-    .nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 14px 24px;
-    }
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+font-weight:bold;
+}
 
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-weight: bold;
-      font-size: 18px;
-    }
+/* البطل */
+.hero{
+text-align:center;
+padding:80px 20px 60px;
+}
 
-    .logo img {
-      width: 34px;
-      height: 34px;
-      border-radius: 8px;
-    }
+.hero h1{font-size:36px;margin-bottom:10px}
+.hero p{opacity:.85;max-width:700px;margin:auto}
 
-    nav a {
-      color: #dbeafe;
-      text-decoration: none;
-      margin: 0 10px;
-      font-size: 14px;
-    }
+/* الأقسام */
+#sections{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:22px;
+padding:40px 20px;
+}
 
-    nav a:hover {
-      color: #60a5fa;
-    }
+.card{
+background:rgba(255,255,255,.04);
+border-radius:18px;
+overflow:hidden;
+}
 
-    section {
-      padding: 100px 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
+.card img{
+width:100%;
+height:170px;
+object-fit:cover;
+}
 
-    .hero {
-      text-align: center;
-      padding-top: 140px;
-    }
+.card .content{
+padding:18px;
+text-align:center;
+}
 
-    .hero h1 {
-      font-size: 42px;
-      margin-bottom: 10px;
-    }
+.card h3{margin:8px 0}
+.card p{opacity:.8;font-size:14px}
 
-    .hero p {
-      color: #cbd5f5;
-      max-width: 700px;
-      margin: auto;
-      line-height: 1.8;
-    }
+.card a{
+display:inline-block;
+margin-top:14px;
+padding:10px 24px;
+border-radius:999px;
+background:#2563eb;
+color:#fff;
+text-decoration:none;
+}
 
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
-      margin-top: 40px;
-    }
+/* الفوتر */
+footer{
+padding:40px 20px;
+text-align:center;
+border-top:1px solid rgba(255,255,255,.08);
+}
 
-    .card {
-      background: rgba(15, 23, 42, 0.8);
-      border-radius: 16px;
-      padding: 24px;
-      text-align: center;
-    }
+.social a{
+margin:0 10px;
+font-size:20px;
+color:#fff;
+text-decoration:none;
+opacity:.8;
+}
 
-    .card h3 {
-      margin-bottom: 10px;
-    }
-
-    .card p {
-      color: #c7d2fe;
-      font-size: 14px;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 14px;
-      padding: 10px 22px;
-      background: #2563eb;
-      color: #fff;
-      border-radius: 20px;
-      text-decoration: none;
-      font-size: 14px;
-    }
-
-    /* الفوتر */
-    footer {
-      background: #020617;
-      padding: 60px 20px 30px;
-      text-align: center;
-    }
-
-    .socials a {
-      margin: 0 10px;
-      font-size: 22px;
-      color: #cbd5f5;
-    }
-
-    .socials a:hover {
-      color: #60a5fa;
-    }
-
-    footer a {
-      color: #93c5fd;
-      text-decoration: none;
-      margin: 0 8px;
-      font-size: 13px;
-    }
-
-    footer p {
-      margin-top: 20px;
-      font-size: 12px;
-      color: #94a3b8;
-    }
-  </style>
+.social a:hover{opacity:1}
+</style>
 </head>
 
 <body>
 
-<header id="header">
-  <div class="nav">
-    <div class="logo">
-      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgbT4w_HP5Siki2yzcnYGoDA-H3mLguxZvnmOggcDGjyy4NZzTxuh42mh79HAsWngZokPVL7VYtv5XI4izdqErYIZG76TM9arJv-AfZKSxi8OBA52ZfiwVRmtlNYqBXsoj5SRrRfey7CPCZJ3SlVbGKvAi5G6Ntc73tzYVG8qvgpDVYupHuH-gRv_Mi2sY/s561/Screenshot_20251223_200946_Google.jpg">
-      البصمة ون
-    </div>
-    <nav>
-      <a href="#الأقسام">الأقسام</a>
-      <a href="#من-نحن">من نحن</a>
-      <a href="#تواصل">تواصل معنا</a>
-    </nav>
-  </div>
+<header>
+<nav>
+<a href="#sections">الأقسام</a>
+<a href="privacy.html">سياسة الخصوصية</a>
+</nav>
+
+<div class="logo">
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgbT4w_HP5Siki2yzcnYGoDA-H3mLguxZvnmOggcDGjyy4NZzTxuh42mh79HAsWngZokPVL7VYtv5XI4izdqErYIZG76TM9arJv-AfZKSxi8OBA52ZfiwVRmtlNYqBXsoj5SRrRfey7CPCZJ3SlVbGKvAi5G6Ntc73tzYVG8qvgpDVYupHuH-gRv_Mi2sY/s561/logo.jpg" width="36">
+البصمة ون
+</div>
 </header>
 
 <section class="hero">
-  <h1>البصمة ون</h1>
-  <p>
-    منصة رقمية تجمع مشاريعك وخدماتك وأدواتك في مكان واحد، بواجهة احترافية وتجربة استخدام واضحة
-    تساعد الزائر على الوصول السريع لما تقدمه.
-  </p>
+<h1>البصمة ون</h1>
+<p>منصة رقمية تجمع مشاريعك وخدماتك وأدواتك في مكان واحد بواجهة احترافية وتجربة استخدام واضحة.</p>
 </section>
 
-<section id="الأقسام">
-  <h2>الأقسام الرئيسية</h2>
-  <div class="cards">
-    <div class="card">
-      <h3>المتجر الرقمي</h3>
-      <p>بيع كتب رقمية، قوالب، واشتراكات جاهزة للاستخدام.</p>
-      <a class="btn" href="#">فتح القسم</a>
-    </div>
-    <div class="card">
-      <h3>التسويق بالعمولة</h3>
-      <p>أفضل العروض والمنتجات المربحة.</p>
-      <a class="btn" href="#">استعراض</a>
-    </div>
-    <div class="card">
-      <h3>قوالب وتصاميم</h3>
-      <p>قوالب جاهزة للمواقع والمدونات.</p>
-      <a class="btn" href="#">عرض</a>
-    </div>
-  </div>
-</section>
+<section id="sections"></section>
 
-<section id="من-نحن">
-  <h2>من نحن</h2>
-  <p>
-    البصمة ون منصة عربية مستقلة تهدف إلى تنظيم وإدارة المشاريع الرقمية بطريقة احترافية
-    تبرز القيمة الحقيقية لكل مشروع، وتسهّل على الزائر الوصول للخدمات والمحتوى دون تعقيد.
-  </p>
-</section>
-
-<footer id="تواصل">
-  <div class="socials">
-    <a href="https://www.facebook.com/profile.php?id=61585771371466" target="_blank"><i class="fab fa-facebook"></i></a>
-    <a href="https://t.me/BasmaOne" target="_blank"><i class="fab fa-telegram"></i></a>
-  </div>
-
-  <div style="margin-top:20px">
-    <a href="#من-نحن">من نحن</a>
-    <a href="#">سياسة الخصوصية</a>
-  </div>
-
-  <p>© 2025 البصمة ون – جميع الحقوق محفوظة</p>
+<footer>
+<div class="social">
+<a href="https://www.facebook.com/profile.php?id=61585771371466" target="_blank">فيسبوك</a>
+<a href="https://t.me/BasmaOne" target="_blank">تلجرام</a>
+</div>
+<p style="opacity:.6;margin-top:16px">© 2025 البصمة ون</p>
 </footer>
 
-<!-- Sticky Header Script -->
 <script>
-  window.addEventListener("scroll", function () {
-    const header = document.getElementById("header");
-    header.classList.toggle("scrolled", window.scrollY > 40);
-  });
+fetch('sections.json')
+.then(r=>r.json())
+.then(data=>{
+const box=document.getElementById('sections');
+box.innerHTML='';
+data.forEach(s=>{
+box.innerHTML+=`
+<div class="card">
+<img src="${s.image}">
+<div class="content">
+<h3>${s.title}</h3>
+<p>${s.description}</p>
+<a href="${s.link}" target="_blank">${s.button}</a>
+</div>
+</div>`;
+});
+});
 </script>
 
-<!-- Tawk.to -->
+<!-- Tawk -->
 <script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+var Tawk_API=Tawk_API||{},Tawk_LoadStart=new Date();
 (function(){
 var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
 s1.async=true;
