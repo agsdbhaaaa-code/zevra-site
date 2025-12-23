@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>ZEVRA – منصة مشاريع رقمية</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="ZEVRA منصة تجمع مشاريع رقمية وخدمات أونلاين في مكان واحد." />
+  <style>
+    body{margin:0;font-family:Tahoma,Arial;background:#0b0f14;color:#eee}
+    header{text-align:center;padding:50px 20px}
+    header h1{margin:0;font-size:36px}
+    header p{margin-top:10px;color:#aaa}
+    .wrap{max-width:1200px;margin:auto;padding:20px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
+    .card{background:#121826;border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.4)}
+    .card img{width:100%;height:200px;object-fit:cover}
+    .card .body{padding:18px}
+    .card h3{margin:0 0 8px}
+    .card p{margin:0 0 12px;color:#bbb;font-size:14px}
+    .btn{display:inline-block;padding:8px 18px;background:#2563eb;border-radius:20px;font-size:13px}
+    footer{text-align:center;padding:30px;color:#777}
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>ZEVRA</h1>
+  <p>منصة تجمع كل مشاريعك الرقمية في مكان واحد</p>
+</header>
+
+<div class="wrap">
+  <div class="grid" id="sections"></div>
+</div>
+
+<footer>
+  © <script>document.write(new Date().getFullYear())</script> ZEVRA
+</footer>
+
+<script>
+fetch('sections.json')
+.then(res => res.json())
+.then(data => {
+  const box = document.getElementById('sections');
+  data.forEach(s => {
+    box.innerHTML += `
+      <div class="card">
+        <img src="${s.image}" alt="${s.title}">
+        <div class="body">
+          <h3>${s.title}</h3>
+          <p>${s.description}</p>
+          <a class="btn" href="${s.link}" target="_blank">${s.button}</a>
+        </div>
+      </div>
+    `;
+  });
+});
+</script>
+
+</body>
+</html>
