@@ -1,59 +1,145 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>ZEVRA – منصة مشاريع رقمية</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="ZEVRA منصة تجمع مشاريع رقمية وخدمات أونلاين في مكان واحد." />
+
+  <meta name="description" content="منصة ZEVRA تجمع المتاجر الرقمية، القوالب، التسويق بالعمولة، والمحتوى التقني في مكان واحد">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <style>
-    body{margin:0;font-family:Tahoma,Arial;background:#0b0f14;color:#eee}
-    header{text-align:center;padding:50px 20px}
-    header h1{margin:0;font-size:36px}
-    header p{margin-top:10px;color:#aaa}
-    .wrap{max-width:1200px;margin:auto;padding:20px}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
-    .card{background:#121826;border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.4)}
-    .card img{width:100%;height:200px;object-fit:cover}
-    .card .body{padding:18px}
-    .card h3{margin:0 0 8px}
-    .card p{margin:0 0 12px;color:#bbb;font-size:14px}
-    .btn{display:inline-block;padding:8px 18px;background:#2563eb;border-radius:20px;font-size:13px}
-    footer{text-align:center;padding:30px;color:#777}
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont;
+      background: #0b0f1a;
+      color: #ffffff;
+    }
+
+    header {
+      text-align: center;
+      padding: 70px 20px 50px;
+    }
+
+    header h1 {
+      font-size: 46px;
+      margin-bottom: 12px;
+      letter-spacing: 1px;
+    }
+
+    header p {
+      font-size: 18px;
+      opacity: 0.8;
+      max-width: 600px;
+      margin: auto;
+      line-height: 1.8;
+    }
+
+    .sections {
+      max-width: 1100px;
+      margin: auto;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: #12182a;
+      border-radius: 16px;
+      overflow: hidden;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+    }
+
+    .card img {
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card-content h2 {
+      margin: 0 0 10px;
+      font-size: 22px;
+    }
+
+    .card-content p {
+      margin: 0 0 18px;
+      opacity: 0.8;
+      line-height: 1.7;
+      font-size: 15px;
+    }
+
+    .card-content a.button {
+      display: inline-block;
+      background: #2f6bff;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 10px;
+      opacity: 0.6;
+      font-size: 14px;
+    }
   </style>
 </head>
+
 <body>
 
 <header>
   <h1>ZEVRA</h1>
-  <p>منصة تجمع كل مشاريعك الرقمية في مكان واحد</p>
+  <p>
+    منصة رقمية تجمع مشاريعك وخدماتك وأدواتك في مكان واحد،
+    بواجهة احترافية وتجربة استخدام واضحة.
+  </p>
 </header>
 
-<div class="wrap">
-  <div class="grid" id="sections"></div>
-</div>
+<div class="sections" id="sections"></div>
 
 <footer>
-  © <script>document.write(new Date().getFullYear())</script> ZEVRA
+  © ZEVRA 2025 – جميع الحقوق محفوظة
 </footer>
 
 <script>
 fetch('sections.json')
-.then(res => res.json())
-.then(data => {
-  const box = document.getElementById('sections');
-  data.forEach(s => {
-    box.innerHTML += `
-      <div class="card">
-        <img src="${s.image}" alt="${s.title}">
-        <div class="body">
-          <h3>${s.title}</h3>
-          <p>${s.description}</p>
-          <a class="btn" href="${s.link}" target="_blank">${s.button}</a>
+  .then(response => response.json())
+  .then(sections => {
+    const container = document.getElementById('sections');
+
+    sections.forEach(section => {
+      const card = document.createElement('div');
+      card.className = 'card';
+
+      card.innerHTML = `
+        <a href="${section.link}">
+          <img src="${section.image}" alt="${section.title}">
+        </a>
+        <div class="card-content">
+          <h2>${section.title}</h2>
+          <p>${section.description}</p>
+          <a class="button" href="${section.link}">
+            ${section.button}
+          </a>
         </div>
-      </div>
-    `;
+      `;
+
+      container.appendChild(card);
+    });
   });
-});
 </script>
 
 </body>

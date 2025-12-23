@@ -1,30 +1,30 @@
 [
   {
     "title": "المتجر الرقمي",
-    "description": "بيع كتب رقمية، قوالب، واشتراكات مميزة",
-    "image": "https://via.placeholder.com/600x400?text=Digital+Store",
-    "link": "https://example-store.blogspot.com",
-    "button": "فتح القسم"
+    "description": "بيع كتب رقمية، قوالب، واشتراكات رقمية جاهزة للاستخدام",
+    "image": "https://via.placeholder.com/800x500?text=Digital+Store",
+    "button": "فتح القسم",
+    "link": "https://example-store.blogspot.com"
   },
   {
     "title": "التسويق بالعمولة",
-    "description": "أفضل العروض والمنتجات المربحة",
-    "image": "https://via.placeholder.com/600x400?text=Affiliate",
-    "link": "https://example-affiliate.blogspot.com",
-    "button": "استعراض"
+    "description": "عروض مختارة ومنتجات موثوقة لتحقيق دخل إضافي",
+    "image": "https://via.placeholder.com/800x500?text=Affiliate",
+    "button": "استعراض العروض",
+    "link": "https://example-affiliate.blogspot.com"
   },
   {
     "title": "قوالب وتصاميم",
-    "description": "قوالب جاهزة للمواقع والمدونات",
-    "image": "https://via.placeholder.com/600x400?text=Templates",
-    "link": "https://example-templates.blogspot.com",
-    "button": "الدخول"
+    "description": "قوالب مواقع ومدونات جاهزة بتصميم احترافي",
+    "image": "https://via.placeholder.com/800x500?text=Templates",
+    "button": "عرض القوالب",
+    "link": "https://example-templates.blogspot.com"
   },
   {
     "title": "مدونة الربح من الإنترنت",
-    "description": "شروحات وأفكار عملية للربح أونلاين",
-    "image": "https://via.placeholder.com/600x400?text=Blog",
-    "link": "https://example-blog.blogspot.com",
-    "button": "اقرأ الآن"
+    "description": "مقالات عملية ونصائح حقيقية لبناء دخل رقمي",
+    "image": "https://via.placeholder.com/800x500?text=Blog",
+    "button": "اقرأ الآن",
+    "link": "https://example-blog.blogspot.com"
   }
 ]
