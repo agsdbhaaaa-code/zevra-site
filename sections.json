@@ -1,9 +1,30 @@
 [
   {
-    "title": "قوالب رقمية",
-    "description": "قوالب بلوجر ومواقع جاهزة",
-    "image": "https://via.placeholder.com/800x600?text=Templates",
-    "link": "https://example.com",
-    "button": "الدخول للقسم"
+    "title": "المتجر الرقمي",
+    "description": "بيع كتب رقمية، قوالب، واشتراكات مميزة",
+    "image": "https://via.placeholder.com/600x400?text=Digital+Store",
+    "link": "https://example-store.blogspot.com",
+    "button": "فتح القسم"
+  },
+  {
+    "title": "التسويق بالعمولة",
+    "description": "أفضل العروض والمنتجات المربحة",
+    "image": "https://via.placeholder.com/600x400?text=Affiliate",
+    "link": "https://example-affiliate.blogspot.com",
+    "button": "استعراض"
+  },
+  {
+    "title": "قوالب وتصاميم",
+    "description": "قوالب جاهزة للمواقع والمدونات",
+    "image": "https://via.placeholder.com/600x400?text=Templates",
+    "link": "https://example-templates.blogspot.com",
+    "button": "الدخول"
+  },
+  {
+    "title": "مدونة الربح من الإنترنت",
+    "description": "شروحات وأفكار عملية للربح أونلاين",
+    "image": "https://via.placeholder.com/600x400?text=Blog",
+    "link": "https://example-blog.blogspot.com",
+    "button": "اقرأ الآن"
   }
 ]
